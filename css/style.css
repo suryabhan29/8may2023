@@ -1,0 +1,63 @@
+@font-face {
+    font-family: 'surajFont';
+    src: url('../fonts/KaushanScript-Regular.otf');
+}
+body{
+    margin: 0px;
+    /*
+        Margin: T/B L/
+    */
+}
+header,footer{
+    width: 100%;
+    height: 100px;
+    font-family: surajFont Arial, Helvetica, sans-serif;
+    border: 2px dashed red;
+
+}
+main{
+    height: 1200px;
+    border: 2px dashed green;
+}
+footer{
+    height: 200px;   /*override*/
+    font-family: surajFont Arial, Helvetica, sans-serif;
+}
+aside[data-leftaside="Left"]{
+    width: 25%;
+    border: 1px dashed black;
+    float: left;
+}
+section[data-section="section"]{
+    width: 50%;
+    border: 1px dashed black;
+    float: left;
+}
+aside[data-rightaside="Right"]{
+    width: 24%;
+    border: 1px dashed black;
+    float: left;
+}
+/*
+    @media not|only mediatype (mediafeatur and|or|not mediafeatur)
+*/
+@media only screen and (max-width:600px){
+    body{
+        background-color: red;
+    }
+    aside[data-rightaside="Right"]{
+        width: 23%;
+        
+    }
+} 
+@media only screen and (min-width:601px){
+    body{
+        background-color: green;
+    }
+} 
+@media only screen and (min-width:800px){
+    body{
+        background-color: orange;
+    }
+} 
+
